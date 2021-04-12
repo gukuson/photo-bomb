@@ -22,9 +22,12 @@
         >
       </div>
     </div>
-    <div class="comment-form" v-if="userLogin">
-      <textarea v-model="comment" />
-      <button @click="addComment()">Add Review</button>
+    <div v-if="userLogin">
+      <h1>Add a Review:</h1>
+      <div class="comment-form">
+        <textarea v-model="comment" placeholder="Put your comments here"/>
+        <button @click="addComment()">Add Review</button>
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +47,7 @@ export default {
   created() {
     this.getPhoto();
     this.getComments();
+    this.getUser();
   },
   computed: {
     userLogin() {
@@ -87,6 +91,14 @@ export default {
         this.error = error.response.data.message;
       }
     },
+    async getUser() {
+      try {
+        let response = await axios.get("/api/users");
+        this.$root.$data.user = response.data.user;
+      } catch (error) {
+        this.$root.$data.user = null;
+      }
+    },
   },
 };
 </script>
@@ -115,6 +127,16 @@ pre {
   color: grey;
 }
 .comment {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
+}
+.comment-form {
+  display: flex;
+}
+.comment-form textarea {
+  max-width: 50%;
+}
+.comment-form button {
+  max-height: 25px;
+  margin-left: 1em;
 }
 </style>
