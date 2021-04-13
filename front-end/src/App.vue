@@ -72,19 +72,19 @@ h2 {
   background-color: #277e8e;
 }
 #footer {
-  background-color: #7c8981;
+  background-color: #e74c3c;
   height: 60px;
   text-align: center;
   padding-top: 25px;
   bottom: 0;
   width: 100%;
-  border-top: 3px solid #424f5c;
-  border-bottom: 3px solid #424f5c;
+  border-top: 3px solid rgb(194, 194, 194);
+  border-bottom: 3px solid rgb(194, 194, 194);
 }
 #footer a {
-  color: #d8d5d2;
+  color: white;
 }
 #footer a:hover {
-  color: #8c9caa;
+  color: rgb(194, 194, 194);
 }
 </style>
