@@ -8,6 +8,13 @@
       </nav>
     </header>
     <router-view />
+    <div id="footer">
+      <a
+        href="https://github.com/gukuson/photo-bomb.git"
+        target="_blank"
+        >Github</a
+      >
+    </div>
   </div>
 </template>
 
@@ -17,7 +24,7 @@
  * blue: #277E8E
  */
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 13pt;
   margin: 0px 200px;
@@ -38,7 +45,7 @@ body {
   /* Color and alignment */
   background: #e74c3c;
   text-align: center;
-  box-shadow: 0 0 0 1em #FFF;
+  box-shadow: 0 0 0 1em #fff;
 }
 
 nav {
@@ -62,6 +69,22 @@ h2 {
 }
 
 .pure-button-primary {
-  background-color: #277E8E;
+  background-color: #277e8e;
+}
+#footer {
+  background-color: #7c8981;
+  height: 60px;
+  text-align: center;
+  padding-top: 25px;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px solid #424f5c;
+  border-bottom: 3px solid #424f5c;
+}
+#footer a {
+  color: #d8d5d2;
+}
+#footer a:hover {
+  color: #8c9caa;
 }
 </style>
